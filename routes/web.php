@@ -13,14 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+use App\Http\Controllers\EventController;
 
-    $nome = "Matheus";
+Route::get('/', [EventController::class,'index']);
+Route::get('/events/create', [EventController::class, 'create']);
 
-
-    return view('welcome', ['nome' => $nome] );
-});
 
 Route::get('/contact', function () {
     return view('contact');
+});
+
+Route::get('/product_test/{id?}', function ($id = null) {
+    return view('product', ['id' => $id]);
+});
+
+Route::get('/product', function () {
+
+    $busca = request('search');
+
+    return view('products', ['busca' => $busca]);
 });
