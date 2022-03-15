@@ -13,6 +13,10 @@
             <input accept="image/*" type="file" class="form-control" id="image_events" name="image_events" required>
         </div>
         <div class="form-group">
+            <label for="date">Data do Evento:</label>
+            <input type="date" class="form-control" id="date" name="date">
+        </div>
+        <div class="form-group">
             <label for="title">Evento:</label>
             <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento">
         </div>
