@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'HDC Events')
+@section('title', 'AFT Events')
 
 @section('content')
 <div id="search-container" class="col-md-12">
