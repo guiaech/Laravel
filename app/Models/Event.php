@@ -11,6 +11,10 @@ class Event extends Model
 
     protected $table = 'events';
 
+    protected $casts = [
+        'items' => 'array'
+    ];
+
     protected $fillable  = [ 'title' , 'city' , 'private' , 'description' ];
 
 }
