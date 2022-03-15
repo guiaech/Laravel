@@ -11,10 +11,20 @@ class EventController extends Controller
 
     public function index()
     {
+        $search = request('search');
+        if ($search) {
 
-        $events = Event::all();
+            $events = Event::where([
+                ['title', 'like', '%' . $search . '%']
+            ])->get();
 
-        return view('welcome', ['events' => $events]);
+        } else {
+            $events = Event::all();
+        }
+
+
+
+        return view('welcome', ['events' => $events , 'search' => $search]);
     }
 
     public function create()
@@ -52,7 +62,8 @@ class EventController extends Controller
         return redirect('/')->with('msg', 'Evento criado com sucesso!');
     }
 
-    public function show($id){
+    public function show($id)
+    {
 
         $event = Event::findOrFail($id);
 
