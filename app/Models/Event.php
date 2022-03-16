@@ -19,6 +19,8 @@ class Event extends Model
 
     protected $fillable  = [ 'title' , 'city' , 'private' , 'description' ];
 
+    protected $guarded = [];
+
     public function user(){
         return $this->belongsTo('App\Models\User');
     }
