@@ -201,6 +201,10 @@ header {
     display: flex;
 }
 
+#description-container{
+    padding-top: 30px;
+}
+
 /* footer */
 footer {
     text-align: center;
