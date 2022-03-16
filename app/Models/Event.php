@@ -19,6 +19,10 @@ class Event extends Model
 
     protected $fillable  = [ 'title' , 'city' , 'private' , 'description' ];
 
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
+
 }
 
 
