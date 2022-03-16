@@ -10,8 +10,8 @@
     @csrf
     @method('PUT')
     <div class="form-group">
-      <label for="image">Imagem do Evento:</label>
-      <input type="file" id="image" name="image_events" class="from-control-file">
+      <label for="image_events">Imagem do Evento:</label>
+      <input accept="image/*" type="file" class="form-control" id="image_events" name="image_events">
       <img src="/img/events/{{ $event->image_events }}" alt="{{ $event->title }}" class="img-preview">
     </div>
     <div class="form-group">
